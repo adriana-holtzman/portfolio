@@ -23,6 +23,8 @@
     display: block; /* Change the display to block, for responsive reasons (see below) */
     text-align: center; /* Center the text */
     padding: 14px 20px; /* Add some padding */
+    text-decoration: none;
+    color:black;
   }
   
   /* Right-aligned link */
@@ -120,17 +122,19 @@ body {
   -ms-transform: translate(-50%, -50%);
   background-color: #ffffff; 
   color: black;
-  background: #ffe3fb;
+  background: #ffccf7;
   font-size: 15px;
   text-transform: uppercase;
   padding: 14px 28px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  text-decoration: none;
 }
 
 .container .btn:hover {
-  background-color: #ffccf7;
+  background-color: white;
+  border-width: 5px;
+  border-color: black;
 }
 
 /* FOOTER */
