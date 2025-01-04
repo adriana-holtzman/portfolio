@@ -1,13 +1,110 @@
 <!DOCTYPE html>
-<html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
-<html>
-<body>
+<html lang="en">
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-<a href="https://www.w3schools.com">This is a link</a>
-<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+<head>
+    <title>Adriana Holtzman - ECE, Robotics at CMU</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <style>
+        body {
+        font-family: Helvetica, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body id="home">
+
+<!--TOP MENU BAR WITH LINKS TO HOME(CLICK NAME), PROJECTS, EXPERIENCE, ABOUT, CONTACT-->
+<div class="navbar">
+    <a href="#home" class="left">ADRIANA HOLTZMAN</a>
+    <a href="mailto:adrianah@andrew.cmu.edu" target="_blank">Contact</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+</div>
+
+<!--TITLE SECTION WITH NAME, SENTENCE ABOUT INTERESTS, RESUME/LINKEDIN BUTTON LINKS-->
+<div class="header">
+    <img src="img/about.png" alt="Image" width="200" height="200">
+    <h1>Hi, I'm Adriana.</h1>
+
+    <p>I am a sophomore at Carnegie Mellon University, studying Electrical and 
+      Computer Engineering and Robotics. I am passionate about applying my 
+      technical and leadership skills to innovative solutions. I am 
+      particularly interested in solving problems relating to Controls, Signal 
+      Processing, Medical Robotics, and AI. </p>
+
+    <p>Learn more about me: <a href="https://www.linkedin.com/in/adriana-holtzman/" target="_blank">LinkedIn</a>, <a href="resume.pdf" target="_blank">Resume</a>.</p>
+</div>
+
+<!--PROJECTS SECTION WITH LINKS TO OTHER PAGES-->
+<div class="section" id="projects">
+    <h1>Projects</h1>
+
+    <!--FOUR PROJECTS-->
+    <div class="row">
+        <div class="column">
+          <div class="content">
+            <img src="img/about.png" alt="Cat1" style="width:100%">
+            <h3>Analog Audio Synthesizer</h3>
+            <p>Built synthesizer and recording interface in team of 2 for 
+              Build18 Hardware Hackathon.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="img/about.png" alt="Cat2" style="width:100%">
+            <h3>Caudal Fin Actuator for Autonomous Fish-like Robots</h3>
+            <p>Independent project as an undergraduate researcher in the CMU 
+              Micro Robotics Lab.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="img/about.png" alt="Cat3" style="width:100%">
+            <h3>GPS Real Time Kinematics Data Collection and Analysis</h3>
+            <p>Lead CIA Buggy's Data Team to make informed decisions using 
+              precise GNSS positioning data.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <img src="img/about.png" alt="Cat4" style="width:100%">
+            <h3>CNC Personal Project</h3>
+            <p>As a TechSpark Machine Shop Student Worker, I love machining my 
+              own personal projects.</p>
+          </div>
+        </div>
+      </div>
+    
+  <div class="container">
+    <button class="btn">All Projects</button>
+  </div>
+</div>
+
+<!--SKILLS SECTION-->
+<!--<div class="section" id="skills">
+  <h1>Skills</h1>
+  <p>Software: SolidWorks, Arduino, AutoCAD, ROS, Gazebo, KiCad, Microsoft Office</p>
+  <p>Programming Languages: C/C++, Python, MATLAB, System Verilog, Assembly, LaTeX, HTML, CSS, Javascript</p>
+  <p>Machines: Mill, Lathe, CNC Mill, Waterjet, Laser Cutter, 3D Printer (FDM/SLA), Bandsaw</p>
+</div>
+
+<!--CONTACT ME SECTION-->
+<!--<div class="contact" id="contact">
+  <h1>Leave a note</h1>
+</div>
+
+<!--FOOTER: MADE BY ADRIANA HOLTZMAN-->
+<div class="footer">
+    <p>Made by Adriana Holtzman. Last updated January 2025.</p>
+</div>
 
 </body>
+
+<script src="app.js"></script>
+
 </html>
