@@ -1,0 +1,142 @@
+/* HEADER */
+
+  .header {
+    padding: 80px; /* some padding */
+  }
+  
+  /* Increase the font size of the <h1> element */
+  .header h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+/* NAVBAR */
+/* Style the top navigation bar */
+  .navbar {
+    overflow: hidden;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    top: 0;
+    float: right; /* Make sure that the links stay side-by-side */
+    display: block; /* Change the display to block, for responsive reasons (see below) */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+  }
+  
+  /* Right-aligned link */
+  .navbar a.left {
+    float: left; /* Float a link to the right */
+  }
+  
+  /* Change color on hover/mouse-over */
+  .navbar a:hover {
+    background-color: #ffccf7; /* Grey background color */
+  }
+
+/* PROJECTS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffeffd;
+  padding: 20px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h1 {
+  font-size: 40px;
+  word-break: break-all;
+  text-transform: uppercase;
+}
+
+.section h2 {
+  text-transform: uppercase;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #ffffff; 
+  color: black;
+  background: #ffe3fb;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: #ffccf7;
+}
+
+/* FOOTER */
+
+  .footer {
+    padding: 20px; /* Some padding */
+    text-align: center; /* Center text*/
+    background: #ffccf7;
+  }
