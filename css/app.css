@@ -231,6 +231,79 @@ input[type=submit]:hover {
   background-color: #ffccf7;
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.social-links a{
+  text-align: center;
+  line-height: 45px;
+  vertical-align: middle;
+	float: left;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	margin-right: 7px; /*space between*/
+  text-decoration: none;
+} 
+.social-links a i{
+	font-size: 20px;
+  margin: 0 auto;
+}
+
+.social-links a:hover{
+  opacity: 70%;
+}
+
+.social-links-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 10px;
+}
+
+.social-links-left a{
+  text-align: center;
+  line-height: 45px;
+  vertical-align: middle;
+	float: left;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	margin-right: 10px; /*space between*/
+  text-decoration: none;
+} 
+.social-links-left a i{
+	font-size: 20px;
+  margin: 0 auto;
+}
+
+.social-links-left a:hover{
+  opacity: 70%;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-envelope {
+  background: #ff3578;
+  color: white;
+}
+
+/* Twitter */
+.fa-linkedin {
+  background: #1c60ff;
+  color: white;
+}
+
+.fa-github {
+  background: #821cff;
+  color: white;
+}
+
 /* Add a background color and some padding around the form */
 .note_container {
   border-radius: 5px;
