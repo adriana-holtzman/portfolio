@@ -7,12 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/app.css" rel="stylesheet">
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         body {
         font-family: Helvetica, sans-serif;
         }
     </style>
+
+    <script src="jquery.js"></script> 
+    <script> 
+        $(function () {
+          var includes = $('[data-include]')
+          $.each(includes, function () {
+            var file = $(this).data('include') + '.html'
+            $(this).load(file)
+          })
+        })
+    </script> 
 
 </head>
 
@@ -34,7 +46,16 @@
       to see what I will learn at Draper Laboratories, where I will be working
       as an Undergraduate Systems Engineer in the Strategic Systems Division. </p>
 
-    <p>Learn more about me: <a href="https://www.linkedin.com/in/adriana-holtzman/" target="_blank">LinkedIn</a>, <a href="resume.pdf" target="_blank">Resume</a>.</p>
+    <p>Learn more about me: 
+      <a href="resume.pdf" target="_blank">Resume</a>.
+    </p>
+
+    <div class="social-links">
+      <a href="mailto:adrianah@andrew.cmu.edu" target="_blank"<i class="fa fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/adriana-holtzman/" target="_blank"<i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/adriana-holtzman" target="_blank"<i class="fa fa-github"></i></a>
+    </div>
+
 </div>
 
 <!--PROJECTS SECTION WITH LINKS TO OTHER PAGES-->
@@ -43,39 +64,49 @@
 
     <!--FOUR PROJECTS-->
     <div class="row">
-        <div class="column">
-          <div class="content">
-            <img src="img/about.png" alt="Cat1" style="width:100%">
-            <h3>Analog Audio Synthesizer</h3>
-            <p>Built synthesizer and recording interface in team of 2 for 
-              Build18 Hardware Hackathon.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <img src="img/MRL.png" alt="Actuator during testing" style="width:100%">
-            <h3>Caudal Fin Actuator for Autonomous Fish-like Robots</h3>
-            <p>Independent project as an undergraduate researcher in the CMU 
-              Micro Robotics Lab.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <img src="img/about.png" alt="Cat3" style="width:100%">
-            <h3>GPS Real Time Kinematics Data Collection and Analysis</h3>
-            <p>Lead CIA Buggy's Data Team to make informed decisions using 
-              precise GNSS positioning data.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <img src="img/CNC.png" alt="Mastercam 2024" style="width:100%">
-            <h3>CNC Personal Project</h3>
-            <p>As a TechSpark Machine Shop Student Worker, I love machining my 
-              own personal projects.</p>
-          </div>
+
+      <div class="column">
+        <div class="content">
+          <img src="img/about.png" alt="Cat1" style="width:100%">
+          <h3><a href="projects/synth.html">
+              Analog Audio Synthesizer</a></h3>
+          <p>Built synthesizer and recording interface in team of 2 for 
+            Build18 Hardware Hackathon.</p>
         </div>
       </div>
+
+      <div class="column">
+        <div class="content">
+          <img src="img/MRL.png" alt="Actuator during testing" style="width:100%">
+          <h3><a href="projects/mrl-research.html">
+              Caudal Fin Actuator for Autonomous Fish-like Robots</a></h3>
+          <p>Independent project as an undergraduate researcher in the CMU 
+            Micro Robotics Lab.</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <img src="img/about.png" alt="Cat3" style="width:100%">
+          <h3><a href="projects/cia-data-collection.html">
+              GPS Real Time Kinematics Data Collection</a></h3>
+          <p>Ensured successful collection and processing of 
+              precise GNSS data as CIA Buggy's Data Chair.
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <img src="img/CNC.png" alt="Mastercam 2024" style="width:100%">
+          <h3><a href="projects/cnc.html">
+              CNC Personal Project</a></h3>
+          <p>As a TechSpark Machine Shop Student Worker, I love machining my 
+            own personal projects.</p>
+        </div>
+      </div>
+
+    </div> <!--END ROW-->
     
   <div class="container">
     <a href="allprojects.html" class="btn"><b>All Projects</b></a>
@@ -91,35 +122,48 @@
 </div>
 
 
-<!--CONTACT ME SECTION-->
+<!--CONTACT ME SECTION
 
 <div class="section" id="contact">
+
   <h1>Contact me</h1>
+
   <p>Feel free to email me at 
-    <a href="mailto:adrianah@andrew.cmu.edu" target="_blank">adrianah@andrew.cmu.edu</a>
-     or leave me a message through this website.</p>
+    <a href="mailto:adrianah@andrew.cmu.edu" target="_blank">adrianah@andrew.cmu.edu</a>, 
+    click on one of the following icons, or leave me a message through the contact page.
+  </p>
+  
+  <div class="social-links">
+    <a href="mailto:adrianah@andrew.cmu.edu" target="_blank"<i class="fa fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/adriana-holtzman/" target="_blank"<i class="fa fa-linkedin"></i></a>
+    <a href="https://github.com/adriana-holtzman"<i class="fa fa-github"></i></a>
+  </div>
       
+    <!-- BUTTON
     <div class="container">
       <a href="contact.html" class="btn"><b>Leave a message</b></a>
     </div>
-</div>
+    
+</div> -->
 
 <!--THE FOLLOWING CODE IS THE SAME ON EVERY PAGE-->
 
-<!--FOOTER: MADE BY ADRIANA HOLTZMAN-->
+<div data-include="allpages"></div>
+
+<!--FOOTER: MADE BY ADRIANA HOLTZMAN
 <div class="footer">
     <p>Made by Adriana Holtzman. Last updated January 2025.</p>
 </div>
 
-<!--TOP MENU BAR WITH LINKS TO HOME(CLICK NAME), PROJECTS, EXPERIENCE, ABOUT, CONTACT-->
+<!--TOP MENU BAR WITH LINKS TO HOME(CLICK NAME), PROJECTS, EXPERIENCE, ABOUT, CONTACT
 <div class="navbar">
   <a href="index.html" class="left"><b>ADRIANA HOLTZMAN</b></a>
   <a href="contact.html">Contact</a>
   <a href="allprojects.html">Projects</a>
 </div>
-
+-->
 </body>
 
-<script src="app.js"></script>
+<!--script src="js/app.js"></script>-->
 
 </html>
