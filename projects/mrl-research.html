@@ -48,15 +48,50 @@
                     coordinated behaviors, such as schooling.
                 </p>
 
-                <p><b>Actuator Design: </b>
-                    (include CAD design work, circuit design and debug, 
-                    manufacturing, material experimentation, Arduino code)
+                <p><b>Actuator Design Process: </b>
+                    Since I was tasked with creating all of the systems 
+                    contributing to my actuator, my design process went 
+                    through many stages. 
                 </p>
 
-                <p><b>Testing and Quantification: </b>
-                    (include CAD design, manufacturing, safety assurance
-                    procedures, camera info, segmentation tracker, matlab, 
-                    conclusions)
+                <ul>
+                    <li>Arduino programming to allow for variable inertial 
+                        output
+                    </li>
+
+                    <li>Circuit design and wiring to control electromagnetic 
+                        coil, using KiCad and circuit debugging 
+                        tools
+                    </li>
+
+                    <li>Rapid prototyping using Formlabs SLA 3D Printing 
+                        to select fin material, 
+                        ultimately a compliant resin
+                    </li>
+
+                    <li>CAD designed and manufactured mechanical assembly, 
+                        connecting custom fin to 
+                        electromagnetic actuator circuit
+                    </li>
+
+                    <li>Developed, designed, and built physical test setup 
+                        to ensure safe wire management for underwater testing
+                    </li>
+
+                    <li>
+                        Developed test procedures to verify actuation control 
+                        in air and underwater using vision (high speed camera)
+                    </li>
+                    
+                </ul>
+
+                <p><b>Quantification and Conclusions: </b>
+                    After processing high speed camera footage using a 
+                    Segmentation Tracking algorithm and visualizing 
+                    the data using MATLAB, I determined that my actuator 
+                    achieved inertia-based turning based on two 
+                    programmed inputs, allowing for future flow sensor 
+                    integration and autonomy. 
                 </p>
 
                 <p><b>What I learned: </b>
@@ -77,8 +112,32 @@
 
         <div class="columnx2">
             <div class="note_container">
-                <img src="../img/about.png" alt="Project image" style="width:100%">
-                <p>Caption.</p>
+
+                <div class="columnx2">
+                    <video width="100%" autoplay muted loop>
+                        <source src="../img/segmentation-demo.mp4" type="video/mp4">
+                        Test Example Video
+                    </video>
+                </div>
+
+                <div class="rowx2">
+                    <div class="columnx2">
+                        <img src="../img/mrl-segmentation.png" alt="Segmentation Tracking Example" 
+                        style="width:100%">
+                    </div>
+                </div>
+                <p>Sample test clip (left) and corresponding segmentation 
+                    tracking output (right), tracking black dots on fin, 
+                    as graphed in MATLAB.
+                </p>
+
+                <img src="../img/mrl-quantification.png" alt="Quantification Results" style="width:100%">
+                <p>Graph demonstrating relationship between programmed 
+                    PWM inputs (in this case the two inputs are equal) and 
+                    the angular velocity and amplitude of the actuator. 
+                    PWM signal visualization is included for clarity along 
+                    the x-axis.
+                </p>
             </div>
         </div>
     </div>

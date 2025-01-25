@@ -168,7 +168,7 @@ body {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .columnx2 {
     width: 100%;
   }
@@ -224,6 +224,56 @@ input[type=submit] {
   border-color: black;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.envelope-container {
+  position: relative;
+  text-align: center;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 150px;
+  left: 40px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 150px;
+  right: 40px;
+}
+
+/* Top left text */
+.top-center {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 150px;
+  right: 40px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 57.5%;
+  left: 40px;
+  right: 40px;
+  transform: translate(0, -50%);
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
@@ -308,7 +358,7 @@ input[type=submit]:hover {
 .note_container {
   border-radius: 5px;
   /*background-color: white; */
-  padding: 20px;
+  padding: 10px;
 }
 
 /* FOOTER */
