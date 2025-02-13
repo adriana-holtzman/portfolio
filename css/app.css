@@ -1,3 +1,24 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Pang";
+  src: url("../fonts/pang.otf") format("opentype");
+  /*src: url("../fonts/lombok-typewriter-font/LombokTypewriter-R91we.ttf") format("opentype");*/
+}
+
+@font-face {
+  font-family: "Goudy";
+  src: url("../fonts/Goudy-Bookletter-1911/goudy_bookletter_1911.otf") format("opentype")
+}
+
+h1, h2{
+  font-family: "Pang";
+}
+
+p, li, h3, h4, h5, h6{
+  font-family: "Goudy";
+}
+
 /* HEADER */
 
   .header {
@@ -9,6 +30,38 @@
     font-size: 50px;
     text-transform: uppercase;
   }
+
+  .header .columnx2{
+    width: 70%;
+    padding: 20px;
+  }
+
+  .header .photocolumn{
+    width: 30%;
+    float: right;
+  }
+
+  .header .photocolumn img {
+    width:100%;
+    max-width:400px;
+    max-height:400px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .header .columnx2 {
+      width: 100%;
+    }
+
+    .header .photocolumn {
+      width: 100%;
+    }
+
+    .header .photocolumn img {
+      max-width:300px;
+      max-height:300px;
+    }
+  }
+
 
 /* NAVBAR */
 /* Style the top navigation bar */
@@ -31,6 +84,7 @@
     padding: 12px 20px; /* Add some padding */
     text-decoration: none;
     color:black;
+    font-family: "Pang"; /* CHANGE AS NEEDED */
   }
   
   /* Right-aligned link */
@@ -53,7 +107,6 @@
 body {
   background-color: #ffeffd;
   padding: 20px;
-  font-family: Helvetica, sans-serif;
 }
 
 /* Center website */
@@ -76,6 +129,7 @@ body {
 .section h2 {
   text-transform: uppercase;
 }
+
 
 .row {
   margin: 8px -16px;
@@ -102,8 +156,12 @@ body {
 
 /* Content */
 .content {
-  background-color: white;
-  padding: 10px;
+  /*background-color: white;*/
+  padding: 15px;
+}
+
+.content a{
+  text-decoration: none;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -140,6 +198,7 @@ body {
   border: none;
   cursor: pointer;
   text-decoration: none;
+  font-family: "Goudy"; /* CHANGE AS NEEDED */
 }
 
 .container .btn:hover {
@@ -212,7 +271,7 @@ input[type=text], select, textarea {
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  font-family: Helvetica, sans-serif;
+  font-family: "Goudy"; 
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
@@ -224,6 +283,7 @@ input[type=submit] {
   border-color: black;
   border-radius: 4px;
   cursor: pointer;
+  font-family: "Goudy"; /* CHANGE AS NEEDED */
 }
 
 .envelope-container {
