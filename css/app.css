@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "Pang";
-  src: url("../fonts/pang.otf") format("opentype");
-  /*src: url("../fonts/lombok-typewriter-font/LombokTypewriter-R91we.ttf") format("opentype");*/
+  /*src: url("../fonts/pang.otf") format("opentype");*/
+  src: url("../fonts/lombok-typewriter-font/LombokTypewriter-R91we.ttf") format("opentype");
 }
 
 @font-face {
@@ -24,6 +24,12 @@ p, li, h3, h4, h5, h6{
   .header {
     padding: 80px; /* some padding */
   }
+
+  @media screen and (max-width:500px) {
+    .header {
+      padding: 40px;
+    }
+  }
   
   /* Increase the font size of the <h1> element */
   .header h1 {
@@ -32,12 +38,12 @@ p, li, h3, h4, h5, h6{
   }
 
   .header .columnx2{
-    width: 70%;
+    width: 65%;
     padding: 20px;
   }
 
   .header .photocolumn{
-    width: 30%;
+    width: 35%;
     float: right;
   }
 
@@ -90,6 +96,12 @@ p, li, h3, h4, h5, h6{
   /* Right-aligned link */
   .navbar a.left {
     float: left; /* Float a link to the right */
+  }
+
+  @media screen and (max-width: 500px){
+    .navbar a.left {
+      width: 30%;
+    }
   }
   
   /* Change color on hover/mouse-over */
