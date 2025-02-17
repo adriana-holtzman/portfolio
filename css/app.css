@@ -23,6 +23,7 @@ p, li, h3, h4, h5, h6{
 
   .header {
     padding: 80px; /* some padding */
+    padding-bottom: 0px;
   }
 
   @media screen and (max-width:500px) {
@@ -33,7 +34,7 @@ p, li, h3, h4, h5, h6{
   
   /* Increase the font size of the <h1> element */
   .header h1 {
-    font-size: 50px;
+    font-size: 60px;
     text-transform: uppercase;
   }
 
@@ -89,6 +90,7 @@ p, li, h3, h4, h5, h6{
     text-align: center; /* Center the text */
     padding: 12px 20px; /* Add some padding */
     text-decoration: none;
+    border-radius: 15px;
     color:black;
     font-family: "Pang"; /* CHANGE AS NEEDED */
   }
@@ -150,7 +152,7 @@ body {
 /* Add padding BETWEEN each column (if you want) */
 .row,
 .row > .column {
-  padding: 8px;
+  padding: 6px;
 }
 
 /* Create four equal columns that floats next to each other */
@@ -168,8 +170,14 @@ body {
 
 /* Content */
 .content {
-  /*background-color: white;*/
+  background-color: #ffccf7;
   padding: 15px;
+  border-radius: 15px;
+  border: none;
+}
+
+.content:hover{
+  border: 7px solid #ffeffd;
 }
 
 .content a{
@@ -206,8 +214,9 @@ body {
   /*background: #ffccf7; */
   font-size: 15px;
   text-transform: uppercase;
-  padding: 14px 28px;
+  padding: 12px 20px;
   border: none;
+  border-radius: 15px;
   cursor: pointer;
   text-decoration: none;
   font-family: "Goudy"; /* CHANGE AS NEEDED */
@@ -301,6 +310,7 @@ input[type=submit] {
 .envelope-container {
   position: relative;
   text-align: center;
+  color: black;
 }
 
 /* Bottom left text */
@@ -348,7 +358,6 @@ input[type=submit] {
   transform: translate(0, -50%);
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #ffccf7;
 }
@@ -409,21 +418,9 @@ input[type=submit]:hover {
 
 /* Set a specific color for each brand */
 
-/* Facebook */
-.fa-envelope {
-  background: #ff3578;
+.fa-envelope, .fa-linkedin, .fa-github {
   color: white;
-}
-
-/* Twitter */
-.fa-linkedin {
-  background: #1c60ff;
-  color: white;
-}
-
-.fa-github {
-  background: #821cff;
-  color: white;
+  background: #3b3ddf;
 }
 
 /* Add a background color and some padding around the form */
@@ -436,7 +433,65 @@ input[type=submit]:hover {
 /* FOOTER */
 
   .footer {
-    padding: 20px; /* Some padding */
+    position: absolute;
+    left: 0;
+    width: 100%;
     text-align: center; /* Center text*/
-    background: #ffccf7;
+    padding-top: 50px;
   }
+
+/* color schemes */
+
+:root {
+  color-scheme: light dark;
+}
+
+/*@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffeffd;
+    color: black;
+  }
+  .navbar {
+    background-color: #ffeffd;
+  }
+}*/
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: rgb(18, 52, 77);
+    color: white;
+  }
+  .navbar {
+    background-color: rgb(18, 52, 77);
+  }
+  .navbar a {
+    color: white;
+  }
+  .navbar a:hover {
+    background-color: rgb(2, 95, 116);
+  }
+
+  .content {
+    background:rgb(2, 95, 116);
+  }
+
+  .content:hover {
+    border: 7px solid rgb(18, 52, 77);
+  }
+
+  .container .btn {
+    color: white;
+  }
+  
+  .container .btn:hover {
+    background-color: rgb(2, 95, 116);
+    border-width: 5px;
+    border-color: white;
+  }
+
+  .fa-envelope, .fa-linkedin, .fa-github {
+    color: rgb(2, 95, 116);
+    background: white;
+  }
+}
