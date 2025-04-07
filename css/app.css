@@ -12,7 +12,7 @@
 }
 
 h1, h2{
-  font-family: "Pang";
+  font-family: "Goudy";
 }
 
 p, li, h3, h4, h5, h6{
@@ -22,30 +22,30 @@ p, li, h3, h4, h5, h6{
 /* HEADER */
 
   .header {
-    padding: 80px; /* some padding */
+    padding: 20px; /* some padding */
     padding-bottom: 0px;
   }
 
   @media screen and (max-width:500px) {
     .header {
-      padding: 40px;
+      padding: 20px;
     }
   }
   
   /* Increase the font size of the <h1> element */
   .header h1 {
     font-size: 60px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
   }
 
   .header .columnx2{
-    width: 65%;
+    width: 70%;
     padding: 20px;
   }
 
   .header .photocolumn{
-    width: 35%;
-    float: right;
+    width: 30%;
+    float: left;
   }
 
   .header .photocolumn img {
@@ -92,7 +92,7 @@ p, li, h3, h4, h5, h6{
     text-decoration: none;
     border-radius: 15px;
     color:black;
-    font-family: "Pang"; /* CHANGE AS NEEDED */
+    font-family: "Goudy"; /* CHANGE AS NEEDED */
   }
   
   /* Right-aligned link */
@@ -137,12 +137,12 @@ body {
 .section h1 {
   font-size: 40px;
   word-break: break-all;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
-.section h2 {
+/*.section h2 {
   text-transform: uppercase;
-}
+}*/
 
 
 .row {
@@ -170,14 +170,14 @@ body {
 
 /* Content */
 .content {
-  background-color: #ffccf7;
   padding: 15px;
   border-radius: 15px;
   border: none;
 }
 
 .content:hover{
-  border: 7px solid #ffeffd;
+  /*border: 7px solid #ffeffd;*/
+  background-color: #ffccf7;
 }
 
 .content a{
@@ -420,7 +420,8 @@ input[type=submit]:hover {
 
 .fa-envelope, .fa-linkedin, .fa-github {
   color: white;
-  background: #3b3ddf;
+  /*background: #3b3ddf;*/
+  background: black;
 }
 
 /* Add a background color and some padding around the form */
@@ -442,56 +443,56 @@ input[type=submit]:hover {
 
 /* color schemes */
 
-:root {
-  color-scheme: light dark;
-}
-
+/*:root {
+/*  color-scheme: light dark;
+/*}
+/*
 /*@media (prefers-color-scheme: light) {
-  body {
-    background-color: #ffeffd;
-    color: black;
-  }
-  .navbar {
-    background-color: #ffeffd;
-  }
-}*/
+/*  body {
+/*    background-color: #ffeffd;
+/*    color: black;
+/*  }
+/*  .navbar {
+/*    background-color: #ffeffd;
+/*  }
 
-@media (prefers-color-scheme: dark) {
 
-  body {
-    background-color: rgb(18, 52, 77);
-    color: white;
-  }
-  .navbar {
-    background-color: rgb(18, 52, 77);
-  }
-  .navbar a {
-    color: white;
-  }
-  .navbar a:hover {
-    background-color: rgb(2, 95, 116);
-  }
-
-  .content {
-    background:rgb(2, 95, 116);
-  }
-
-  .content:hover {
-    border: 7px solid rgb(18, 52, 77);
-  }
-
-  .container .btn {
-    color: white;
-  }
-  
-  .container .btn:hover {
-    background-color: rgb(2, 95, 116);
-    border-width: 5px;
-    border-color: white;
-  }
-
-  .fa-envelope, .fa-linkedin, .fa-github {
-    color: rgb(2, 95, 116);
-    background: white;
-  }
-}
+/*@media (prefers-color-scheme: dark) {
+/*
+/*  body {
+/*    background-color: rgb(18, 52, 77);
+/*    color: white;
+/*  }
+/*  .navbar {
+/*    background-color: rgb(18, 52, 77);
+/*  }
+/*  .navbar a {
+/*    color: white;
+/*  }
+/*  .navbar a:hover {
+/*    background-color: rgb(2, 95, 116);
+/*  }
+/*
+/*  .content {
+/*    background:rgb(2, 95, 116);
+/*  }
+/*
+/*  .content:hover {
+/*    border: 7px solid rgb(18, 52, 77);
+/*  }
+/*
+/*  .container .btn {
+/*    color: white;
+/*  }
+/*  
+/*  .container .btn:hover {
+/*    background-color: rgb(2, 95, 116);
+/*    border-width: 5px;
+/*    border-color: white;
+/*  }
+/*
+/*  .fa-envelope, .fa-linkedin, .fa-github {
+/*    color: rgb(2, 95, 116);
+/*    background: white;
+/*  }
+/*}
