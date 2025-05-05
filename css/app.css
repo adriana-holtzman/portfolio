@@ -1,9 +1,30 @@
 /* Fonts */
 
-@font-face {
+/* #7be000 grass?-green #ff0057 off-red #004cff blue #ff4294 red-pink*/ 
+
+/*@font-face {
   font-family: "Pang";
-  /*src: url("../fonts/pang.otf") format("opentype");*/
-  src: url("../fonts/lombok-typewriter-font/LombokTypewriter-R91we.ttf") format("opentype");
+  src: url("../fonts/pang.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Apfel";
+  src: url("../fonts/CLT\ Apfel\ Grotezk/desktop/ApfelGrotezk-Mittel.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Coconat";
+  src: url("../fonts/CLT\ Coconat/desktop/Coconat-Demi.otf") format("opentype");
+}*/
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("../fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SpaceLight";
+  src: url("../fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Light.otf") format("opentype");
 }
 
 @font-face {
@@ -11,18 +32,62 @@
   src: url("../fonts/Goudy-Bookletter-1911/goudy_bookletter_1911.otf") format("opentype")
 }
 
-h1, h2{
+h1, h2, .navbar a{
   font-family: "Goudy";
+}
+
+h1 {
+  font-family: "SpaceGrotesk";
+}
+
+a {
+  color:#004cff;
+}
+
+.navbar a.left {
+  font-family: "SpaceGrotesk";
 }
 
 p, li, h3, h4, h5, h6{
   font-family: "Goudy";
 }
 
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 1.75em;
+  text-indent: -1.75em;
+}
+
+li:before {
+  content: "✳";
+  font-size: larger;
+  color: #004cff;
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
+.header li {
+  padding-left: 34px;
+  text-indent: -34px;
+}
+
+.header li:before {
+  content: "✳";
+  font-size: larger;
+  color: #004cff;
+  padding-right: 10px;
+  padding-left: 5px;
+}
+
 /* HEADER */
 
   .header {
-    padding: 20px; /* some padding */
+    padding: 40px; /* some padding */
     padding-bottom: 0px;
   }
 
@@ -34,24 +99,29 @@ p, li, h3, h4, h5, h6{
   
   /* Increase the font size of the <h1> element */
   .header h1 {
-    font-size: 60px;
+    font-size: 62px;
     /*text-transform: uppercase;*/
   }
 
+  .header p, li {
+    font-size: 20px;
+    padding-bottom: 15px;
+  }
+
   .header .columnx2{
-    width: 70%;
+    width: 65%;
     padding: 20px;
   }
 
   .header .photocolumn{
-    width: 30%;
+    width: 35%;
     float: left;
   }
 
   .header .photocolumn img {
     width:100%;
-    max-width:400px;
-    max-height:400px;
+    max-width:500px;
+    max-height:500px;
   }
 
   @media screen and (max-width: 1000px) {
@@ -76,7 +146,6 @@ p, li, h3, h4, h5, h6{
     position: fixed;
     top: 0;
     overflow: hidden;
-    background-color: #ffeffd;
     width: 100%;
     padding: 10px 10px;
     left: 0;
@@ -88,11 +157,11 @@ p, li, h3, h4, h5, h6{
     float: right; /* Make sure that the links stay side-by-side */
     display: block; /* Change the display to block, for responsive reasons (see below) */
     text-align: center; /* Center the text */
-    padding: 12px 20px; /* Add some padding */
+    padding: 5px 20px; /* Add some padding */
     text-decoration: none;
-    border-radius: 15px;
-    color:black;
-    font-family: "Goudy"; /* CHANGE AS NEEDED */
+    border-radius: 30px;
+    color:white;
+    background-color: #ff4294;
   }
   
   /* Right-aligned link */
@@ -108,7 +177,7 @@ p, li, h3, h4, h5, h6{
   
   /* Change color on hover/mouse-over */
   .navbar a:hover {
-    background-color: #ffccf7; /* Grey background color */
+    background-color: #7be000;
   }
 
 
@@ -119,7 +188,7 @@ p, li, h3, h4, h5, h6{
 }
 
 body {
-  background-color: #ffeffd;
+  background-color: #fffcfe;
   padding: 20px;
 }
 
@@ -139,11 +208,6 @@ body {
   word-break: break-all;
   /*text-transform: uppercase;*/
 }
-
-/*.section h2 {
-  text-transform: uppercase;
-}*/
-
 
 .row {
   margin: 8px -16px;
@@ -177,11 +241,12 @@ body {
 
 .content:hover{
   /*border: 7px solid #ffeffd;*/
-  background-color: #ffccf7;
+  background-color: #7be000;
 }
 
 .content a{
   text-decoration: none;
+  font-size: larger;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -198,7 +263,7 @@ body {
   }
 }
 
-.container {
+/*.container {
   position: relative;
   width: 100%;
   height: 50px;
@@ -211,7 +276,7 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   color: black;
-  /*background: #ffccf7; */
+  /*background: #ffccf7; 
   font-size: 15px;
   text-transform: uppercase;
   padding: 12px 20px;
@@ -219,7 +284,7 @@ body {
   border-radius: 15px;
   cursor: pointer;
   text-decoration: none;
-  font-family: "Goudy"; /* CHANGE AS NEEDED */
+  font-family: "Goudy"; /* CHANGE AS NEEDED 
 }
 
 .container .btn:hover {
@@ -260,7 +325,7 @@ body {
   }
 }
 
-
+/*
 .contact_container .btn {
   position: relative;
   top: 50%;
@@ -268,7 +333,7 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   color: black;
-  /*background: #ffccf7; */
+  /*background: #ffccf7; *//*
   font-size: 15px;
   text-transform: uppercase;
   padding: 14px 28px;
@@ -284,57 +349,57 @@ body {
 }
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border-radius: 4px; /* Rounded borders */
-  border-width: 2px;
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  font-family: "Goudy"; 
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
+/*input[type=text], select, textarea {
+/*  width: 100%; /* Full width */
+/*  padding: 12px; /* Some padding */ 
+/*  border-radius: 4px; /* Rounded borders */
+/*  border-width: 2px;
+/*  box-sizing: border-box; /* Make sure that padding and width stays in place */
+/*  margin-top: 6px; /* Add a top margin */
+/*  margin-bottom: 16px; /* Bottom margin */
+/*  font-family: "Goudy"; 
+/*  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+/*}
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: white;
-  color: black;
-  padding: 12px 20px;
-  border-color: black;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: "Goudy"; /* CHANGE AS NEEDED */
-}
+/*input[type=submit] {
+/*  background-color: white;
+/*  color: black;
+/*  padding: 12px 20px;
+/*  border-color: black;
+/*  border-radius: 4px;
+/*  cursor: pointer;
+/*  font-family: "Goudy"; /* CHANGE AS NEEDED */
+/*}
+/*
+/*.envelope-container {
+/*  position: relative;
+/*  text-align: center;
+/*  color: black;
+/*}
 
-.envelope-container {
-  position: relative;
-  text-align: center;
-  color: black;
-}
-
-/* Bottom left text */
+/* Bottom left text 
 .bottom-left {
   position: absolute;
   bottom: 150px;
   left: 40px;
 }
 
-/* Top left text */
+/* Top left text 
 .top-left {
   position: absolute;
   top: 150px;
   left: 40px;
 }
 
-/* Top right text */
+/* Top right text 
 .top-right {
   position: absolute;
   top: 150px;
   right: 40px;
 }
 
-/* Top left text */
+/* Top left text 
 .top-center {
   position: absolute;
   top: 10%;
@@ -342,14 +407,14 @@ input[type=submit] {
   transform: translate(-50%, -50%);
 }
 
-/* Bottom right text */
+/* Bottom right text 
 .bottom-right {
   position: absolute;
   bottom: 150px;
   right: 40px;
 }
 
-/* Centered text */
+/* Centered text 
 .centered {
   position: absolute;
   top: 57.5%;
@@ -360,7 +425,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #ffccf7;
-}
+}*/
 
 .social-links {
   display: flex;
@@ -386,7 +451,8 @@ input[type=submit]:hover {
 }
 
 .social-links a:hover{
-  opacity: 70%;
+  /*opacity: 70%;*/
+  font-size: larger;
 }
 
 .social-links-left {
@@ -417,17 +483,25 @@ input[type=submit]:hover {
 }
 
 /* Set a specific color for each brand */
+/* #7be000 grass?-green #ff0057 off-red #004cff blue #ff4294 red-pink*/ 
 
-.fa-envelope, .fa-linkedin, .fa-github {
+.fa-envelope {
   color: white;
-  /*background: #3b3ddf;*/
-  background: black;
+  background: #ff4294;
 }
 
-/* Add a background color and some padding around the form */
+.fa-linkedin {
+  color: white;
+  background: #004cff;
+}
+
+.fa-github {
+  color: white;
+  background: #7be000;
+}
+
 .note_container {
   border-radius: 5px;
-  /*background-color: white; */
   padding: 10px;
 }
 
@@ -447,52 +521,10 @@ input[type=submit]:hover {
 /*  color-scheme: light dark;
 /*}
 /*
-/*@media (prefers-color-scheme: light) {
-/*  body {
-/*    background-color: #ffeffd;
-/*    color: black;
-/*  }
-/*  .navbar {
-/*    background-color: #ffeffd;
-/*  }
-
-
 /*@media (prefers-color-scheme: dark) {
 /*
 /*  body {
-/*    background-color: rgb(18, 52, 77);
+/*    background-color: #121621;
 /*    color: white;
-/*  }
-/*  .navbar {
-/*    background-color: rgb(18, 52, 77);
-/*  }
-/*  .navbar a {
-/*    color: white;
-/*  }
-/*  .navbar a:hover {
-/*    background-color: rgb(2, 95, 116);
-/*  }
-/*
-/*  .content {
-/*    background:rgb(2, 95, 116);
-/*  }
-/*
-/*  .content:hover {
-/*    border: 7px solid rgb(18, 52, 77);
-/*  }
-/*
-/*  .container .btn {
-/*    color: white;
-/*  }
-/*  
-/*  .container .btn:hover {
-/*    background-color: rgb(2, 95, 116);
-/*    border-width: 5px;
-/*    border-color: white;
-/*  }
-/*
-/*  .fa-envelope, .fa-linkedin, .fa-github {
-/*    color: rgb(2, 95, 116);
-/*    background: white;
 /*  }
 /*}
