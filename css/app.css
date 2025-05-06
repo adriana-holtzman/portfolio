@@ -122,6 +122,10 @@ li:before {
     width:100%;
     max-width:500px;
     max-height:500px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
   }
 
   @media screen and (max-width: 1000px) {
@@ -134,8 +138,8 @@ li:before {
     }
 
     .header .photocolumn img {
-      max-width:300px;
-      max-height:300px;
+      max-width:500px;
+      max-height:500px;
     }
   }
 
