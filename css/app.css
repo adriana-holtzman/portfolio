@@ -89,6 +89,7 @@ li:before {
   .header {
     padding: 40px; /* some padding */
     padding-bottom: 0px;
+
   }
 
   @media screen and (max-width:500px) {
@@ -189,6 +190,7 @@ li:before {
 
 * {
   box-sizing: border-box;
+  cursor:url(../img/aplee.png), auto;
 }
 
 body {
@@ -454,11 +456,6 @@ input[type=submit]:hover {
   margin: 0 auto;
 }
 
-.social-links a:hover{
-  /*opacity: 70%;*/
-  font-size: larger;
-}
-
 .social-links-left {
   display: flex;
   align-items: center;
@@ -492,16 +489,24 @@ input[type=submit]:hover {
 .fa-envelope {
   color: white;
   background: #ff4294;
+  background: #7be000;
 }
 
 .fa-linkedin {
   color: white;
   background: #004cff;
+  background: #7be000;
 }
 
 .fa-github {
   color: white;
   background: #7be000;
+}
+
+.social-links a:hover{
+  /*opacity: 70%;
+  font-size: larger;*/
+  background: #ff4294;
 }
 
 .note_container {
@@ -532,3 +537,6 @@ input[type=submit]:hover {
 /*    color: white;
 /*  }
 /*}
+
+*/
+
