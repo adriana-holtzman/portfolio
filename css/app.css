@@ -298,9 +298,9 @@ body {
   border: none;
 }
 
-.research_project:hover{
+/*.research_project:hover{
   background-color: #7be000;
-}
+}*/
 
 .research_project .photocolumn{
   float: left;
@@ -325,6 +325,8 @@ body {
 
 .research_project .columnx2 p, li{
   padding-bottom: 0;
+  font-size: 17px;
+  padding-bottom: 15px;
 }
 
 .research_project:after {
