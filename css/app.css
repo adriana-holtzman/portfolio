@@ -52,6 +52,11 @@ p, li, h3, h4, h5, h6{
   font-family: "Goudy";
 }
 
+p, li {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
 ul {
   list-style: none;
   margin-left: 0;
@@ -71,18 +76,10 @@ li:before {
   padding-left: 5px;
 }
 
-.header li {
+/*.li {
   padding-left: 34px;
   text-indent: -34px;
-}
-
-.header li:before {
-  content: "✳";
-  font-size: larger;
-  color: #004cff;
-  padding-right: 10px;
-  padding-left: 5px;
-}
+}*/
 
 /* HEADER */
 
@@ -95,6 +92,31 @@ li:before {
   @media screen and (max-width:500px) {
     .header {
       padding: 20px;
+    }
+  }
+
+  .columnx2 {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .rowx2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  @media screen and (max-width: 800px) {
+    .columnx2 {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .columnx3 {
+      width: 100%;
     }
   }
   
@@ -116,7 +138,7 @@ li:before {
 
   .header .photocolumn{
     width: 35%;
-    float: left;
+    float: right;
   }
 
   .header .photocolumn img {
@@ -269,169 +291,50 @@ body {
   }
 }
 
-/*.container {
-  position: relative;
-  width: 100%;
-  height: 50px;
-}
-
-.container .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: black;
-  /*background: #ffccf7; 
-  font-size: 15px;
-  text-transform: uppercase;
-  padding: 12px 20px;
+.research_project{
+  padding: 15px;
+  height: 285px;
+  border-radius: 20px;
   border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  text-decoration: none;
-  font-family: "Goudy"; /* CHANGE AS NEEDED 
 }
 
-.container .btn:hover {
-  background-color: #ffccf7;
-  border-width: 5px;
-  border-color: black;
+.research_project:hover{
+  background-color: #7be000;
 }
 
-/* CONTACT ME SECTION */
-
-.columnx2 {
+.research_project .photocolumn{
   float: left;
-  width: 50%;
+  width: 25%;
+  padding: 5px;
 }
 
-.columnx3 {
-  float: left;
-  width: 33%;
+.research_project .photocolumn img{
+  max-height: 240px;
 }
 
-/* Clear floats after the columns */
-.rowx2:after {
+.research_project .columnx2{
+  float: right;
+  width: 75%;
+  padding-left:25px;
+  padding-top:0px;
+}
+
+.research_project .columnx2 a{
+  font-size: larger;
+}
+
+.research_project .columnx2 p, li{
+  padding-bottom: 0;
+}
+
+.research_project:after {
   content: "";
   display: table;
   clear: both;
 }
 
 
-@media screen and (max-width: 800px) {
-  .columnx2 {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .columnx3 {
-    width: 100%;
-  }
-}
-
-/*
-.contact_container .btn {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: black;
-  /*background: #ffccf7; *//*
-  font-size: 15px;
-  text-transform: uppercase;
-  padding: 14px 28px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.contact_container .btn:hover {
-  background-color: #ffccf7;
-  border-width: 5px;
-  border-color: black;
-}
-
-/* Style inputs with type="text", select elements and textareas */
-/*input[type=text], select, textarea {
-/*  width: 100%; /* Full width */
-/*  padding: 12px; /* Some padding */ 
-/*  border-radius: 4px; /* Rounded borders */
-/*  border-width: 2px;
-/*  box-sizing: border-box; /* Make sure that padding and width stays in place */
-/*  margin-top: 6px; /* Add a top margin */
-/*  margin-bottom: 16px; /* Bottom margin */
-/*  font-family: "Goudy"; 
-/*  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-/*}
-
-/* Style the submit button with a specific background color etc */
-/*input[type=submit] {
-/*  background-color: white;
-/*  color: black;
-/*  padding: 12px 20px;
-/*  border-color: black;
-/*  border-radius: 4px;
-/*  cursor: pointer;
-/*  font-family: "Goudy"; /* CHANGE AS NEEDED */
-/*}
-/*
-/*.envelope-container {
-/*  position: relative;
-/*  text-align: center;
-/*  color: black;
-/*}
-
-/* Bottom left text 
-.bottom-left {
-  position: absolute;
-  bottom: 150px;
-  left: 40px;
-}
-
-/* Top left text 
-.top-left {
-  position: absolute;
-  top: 150px;
-  left: 40px;
-}
-
-/* Top right text 
-.top-right {
-  position: absolute;
-  top: 150px;
-  right: 40px;
-}
-
-/* Top left text 
-.top-center {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Bottom right text 
-.bottom-right {
-  position: absolute;
-  bottom: 150px;
-  right: 40px;
-}
-
-/* Centered text 
-.centered {
-  position: absolute;
-  top: 57.5%;
-  left: 40px;
-  right: 40px;
-  transform: translate(0, -50%);
-}
-
-input[type=submit]:hover {
-  background-color: #ffccf7;
-}*/
+/* CONTACT ME SECTION */
 
 .social-links {
   display: flex;
