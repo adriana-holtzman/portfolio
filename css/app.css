@@ -1,447 +1,335 @@
-/* Fonts */
-
-/* #7be000 grass?-green #ff0057 off-red #004cff blue #ff4294 red-pink*/ 
-
-/*@font-face {
-  font-family: "Pang";
-  src: url("../fonts/pang.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Apfel";
-  src: url("../fonts/CLT\ Apfel\ Grotezk/desktop/ApfelGrotezk-Mittel.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Coconat";
-  src: url("../fonts/CLT\ Coconat/desktop/Coconat-Demi.otf") format("opentype");
-}*/
+/* ======================================================
+   FONTS
+====================================================== */
 
 @font-face {
   font-family: "SpaceGrotesk";
-  src: url("../fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Medium.otf") format("opentype");
+  src: url("../fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Medium.otf")
+    format("opentype");
 }
 
 @font-face {
   font-family: "SpaceLight";
-  src: url("../fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Light.otf") format("opentype");
+  src: url("../fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Light.otf")
+    format("opentype");
 }
 
 @font-face {
   font-family: "Goudy";
-  src: url("../fonts/Goudy-Bookletter-1911/goudy_bookletter_1911.otf") format("opentype")
+  src: url("../fonts/Goudy-Bookletter-1911/goudy_bookletter_1911.otf")
+    format("opentype");
 }
 
-h1, h2, .navbar a{
-  font-family: "Goudy";
-}
-
-h1 {
-  font-family: "SpaceGrotesk";
-}
-
-a {
-  color:#004cff;
-}
-
-.navbar a.left {
-  font-family: "SpaceGrotesk";
-}
-
-p, li, h3, h4, h5, h6{
-  font-family: "Goudy";
-}
-
-p, li {
-  font-size: 20px;
-  padding-bottom: 15px;
-}
-
-ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-li {
-  padding-left: 1.75em;
-  text-indent: -1.75em;
-}
-
-li:before {
-  content: "✳";
-  font-size: larger;
-  color: #004cff;
-  padding-right: 10px;
-  padding-left: 5px;
-}
-
-/*.li {
-  padding-left: 34px;
-  text-indent: -34px;
-}*/
-
-/* HEADER */
-
-  .header {
-    padding: 40px; /* some padding */
-    padding-bottom: 0px;
-
-  }
-
-  @media screen and (max-width:500px) {
-    .header {
-      padding: 20px;
-    }
-  }
-
-  .columnx2 {
-    float: left;
-    width: 50%;
-  }
-  
-  /* Clear floats after the columns */
-  .rowx2:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  
-  @media screen and (max-width: 800px) {
-    .columnx2 {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 400px) {
-    .columnx3 {
-      width: 100%;
-    }
-  }
-  
-  /* Increase the font size of the <h1> element */
-  .header h1 {
-    font-size: 62px;
-    /*text-transform: uppercase;*/
-  }
-
-  .header p, li {
-    font-size: 20px;
-    padding-bottom: 15px;
-  }
-
-  .header .columnx2{
-    width: 65%;
-    padding: 20px;
-  }
-
-  .header .photocolumn{
-    width: 35%;
-    float: right;
-  }
-
-  .header .photocolumn img {
-    width:100%;
-    max-width:500px;
-    max-height:500px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    
-  }
-
-  @media screen and (max-width: 1000px) {
-    .header .columnx2 {
-      width: 100%;
-    }
-
-    .header .photocolumn {
-      width: 100%;
-    }
-
-    .header .photocolumn img {
-      max-width:500px;
-      max-height:500px;
-    }
-  }
-
-
-/* NAVBAR */
-/* Style the top navigation bar */
-  .navbar {
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    width: 100%;
-    padding: 10px 10px;
-    left: 0;
-  }
-  
-  /* Style the navigation bar links */
-  .navbar a {
-    top: 0;
-    float: right; /* Make sure that the links stay side-by-side */
-    display: block; /* Change the display to block, for responsive reasons (see below) */
-    text-align: center; /* Center the text */
-    padding: 5px 20px; /* Add some padding */
-    text-decoration: none;
-    border-radius: 30px;
-    color:white;
-    background-color: #ff4294;
-  }
-  
-  /* Right-aligned link */
-  .navbar a.left {
-    float: left; /* Float a link to the right */
-  }
-
-  @media screen and (max-width: 500px){
-    .navbar a.left {
-      width: 30%;
-    }
-  }
-  
-  /* Change color on hover/mouse-over */
-  .navbar a:hover {
-    background-color: #7be000;
-  }
-
-
-/* MAIN SECTIONS (PROJECTS ETC) */
+/* ======================================================
+   GLOBAL / RESET
+====================================================== */
 
 * {
   box-sizing: border-box;
-  cursor:url(../img/aplee.png), auto;
+  cursor: url("../img/aplee.png"), auto;
 }
 
 body {
   background-color: #fffcfe;
   padding: 20px;
+  margin: 0;
+  font-family: "Goudy";
 }
 
-/* Center website */
+a {
+  color: #004cff;
+  text-decoration: none;
+}
+
+/* Text selection */
+::selection {
+  background: #ff4294;
+  color: white;
+}
+
+/* ======================================================
+   TYPOGRAPHY
+====================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "SpaceGrotesk";
+}
+
+h1 {
+  font-size: 62px;
+}
+
+p,
+li {
+  font-size: 17px;
+  padding-bottom: 15px;
+  font-family: "Goudy";
+}
+
+/* ======================================================
+   LISTS
+====================================================== */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-left: 1.3em;
+  text-indent: -1.3em;
+}
+
+li::before {
+  content: "✳";
+  font-size: larger;
+  color: #004cff;
+  padding-right: 10px;
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.header {
+  padding: 40px;
+  padding-bottom: 0;
+}
+
+.header h1 {
+  font-size: 62px;
+}
+
+.header .columnx2 {
+  width: 65%;
+  float: left;
+  padding: 20px;
+}
+
+.header .photocolumn {
+  width: 35%;
+  float: right;
+}
+
+.header .photocolumn img {
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .header .columnx2,
+  .header .photocolumn {
+    width: 100%;
+    float: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 20px;
+  }
+}
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.navbar a {
+  float: right;
+  padding: 5px 20px;
+  border-radius: 30px;
+  background-color: #ff4294;
+  color: white;
+  font-family: "Goudy";
+}
+
+.navbar a.left {
+  float: left;
+  font-family: "SpaceGrotesk";
+}
+
+.navbar a:hover {
+  background-color: #7be000;
+}
+
+@media (max-width: 500px) {
+  .navbar a.left {
+    width: 30%;
+  }
+}
+
+/* ======================================================
+   MAIN CONTENT / GRID
+====================================================== */
+
 .main {
   max-width: 1000px;
   margin: auto;
 }
 
 .section {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 0;
 }
 
 .section h1 {
   font-size: 40px;
-  word-break: break-all;
-  /*text-transform: uppercase;*/
 }
 
 .row {
   margin: 8px -16px;
 }
 
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-  padding: 6px;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */
-.row:after {
+.row::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Content */
-.content {
-  padding: 15px;
-  border-radius: 15px;
-  border: none;
+.column {
+  float: left;
+  width: 25%;
+  padding: 6px;
 }
 
-.content:hover{
-  /*border: 7px solid #ffeffd;*/
-  background-color: #7be000;
-}
-
-.content a{
-  text-decoration: none;
-  font-size: larger;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .column {
     width: 50%;
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .column {
     width: 100%;
   }
 }
 
-.research_project{
+/* ======================================================
+   CARD / CONTENT BLOCKS
+====================================================== */
+
+.content {
   padding: 15px;
-  height: 285px;
-  border-radius: 20px;
-  border: none;
+  border-radius: 15px;
+  transition: background-color 0.2s ease;
 }
 
-/*.research_project:hover{
+.content:hover {
   background-color: #7be000;
-}*/
-
-.research_project .photocolumn{
-  float: left;
-  width: 25%;
-  padding: 5px;
 }
 
-.research_project .photocolumn img{
-  max-height: 240px;
-}
-
-.research_project .columnx2{
-  float: right;
-  width: 75%;
-  padding-left:25px;
-  padding-top:0px;
-}
-
-.research_project .columnx2 a{
+.content a {
   font-size: larger;
 }
 
-.research_project .columnx2 p, li{
-  padding-bottom: 0;
-  font-size: 17px;
-  padding-bottom: 15px;
+/* ======================================================
+   RESEARCH PROJECTS
+====================================================== */
+
+.research_project {
+  padding: 15px;
+  height: 285px;
+  border-radius: 20px;
 }
 
-.research_project:after {
+.research_project::after {
   content: "";
   display: table;
   clear: both;
 }
 
-
-/* CONTACT ME SECTION */
-
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+.research_project .photocolumn {
+  float: left;
+  width: 25%;
 }
 
-.social-links a{
-  text-align: center;
-  line-height: 45px;
-  vertical-align: middle;
-	float: left;
-	width: 45px;
-	height: 45px;
-	border-radius: 100%;
-	margin-right: 7px; /*space between*/
-  text-decoration: none;
-} 
-.social-links a i{
-	font-size: 20px;
-  margin: 0 auto;
+.research_project .photocolumn img {
+  max-height: 240px;
 }
 
+.research_project .columnx2 {
+  float: right;
+  width: 75%;
+  padding-left: 25px;
+}
+
+/* .research_project .columnx2 p,
+.research_project .columnx2 li {
+  font-size: 17px;
+  padding-bottom: 15px;
+} */
+
+/* ======================================================
+   SOCIAL LINKS
+====================================================== */
+
+.social-links,
 .social-links-left {
   display: flex;
   align-items: center;
-  justify-content: left;
   padding: 10px;
 }
 
-.social-links-left a{
-  text-align: center;
+.social-links {
+  justify-content: center;
+}
+
+.social-links-left {
+  justify-content: flex-start;
+}
+
+.social-links a,
+.social-links-left a {
+  width: 45px;
+  height: 45px;
   line-height: 45px;
-  vertical-align: middle;
-	float: left;
-	width: 45px;
-	height: 45px;
-	border-radius: 100%;
-	margin-right: 10px; /*space between*/
-  text-decoration: none;
-} 
-.social-links-left a i{
-	font-size: 20px;
-  margin: 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 10px;
 }
 
-.social-links-left a:hover{
-  opacity: 70%;
+.social-links a i,
+.social-links-left a i {
+  font-size: 20px;
 }
 
-/* Set a specific color for each brand */
-/* #7be000 grass?-green #ff0057 off-red #004cff blue #ff4294 red-pink*/ 
-
-.fa-envelope {
-  color: white;
-  background: #ff4294;
-  background: #7be000;
+.social-links a:hover,
+.social-links-left a:hover {
+  opacity: 0.7;
 }
 
-.fa-linkedin {
-  color: white;
-  background: #004cff;
-  background: #7be000;
-}
-
+/* Brand colors */
+.fa-envelope,
+.fa-linkedin,
 .fa-github {
   color: white;
   background: #7be000;
 }
 
-.social-links a:hover{
-  /*opacity: 70%;
-  font-size: larger;*/
-  background: #ff4294;
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
 }
-
-.note_container {
-  border-radius: 5px;
-  padding: 10px;
-}
-
-/* FOOTER */
-
-  .footer {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    text-align: center; /* Center text*/
-    padding-top: 50px;
-  }
-
-/* color schemes */
-
-/*:root {
-/*  color-scheme: light dark;
-/*}
-/*
-/*@media (prefers-color-scheme: dark) {
-/*
-/*  body {
-/*    background-color: #121621;
-/*    color: white;
-/*  }
-/*}
-
-*/
 
