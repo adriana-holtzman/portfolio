@@ -36,6 +36,12 @@ body {
   font-family: "Goudy";
 }
 
+@media (max-width: 700px) {
+  body {
+    margin-inline: 10px;
+  }
+}
+
 a {
   color: #004cff;
   text-decoration: none;
@@ -238,10 +244,6 @@ li::before {
   padding-block: 15px;
 }
 
-.research_project h3{
-  color: #004cff;
-}
-
 .research_project::after {
   content: "";
   display: table;
@@ -275,6 +277,13 @@ li::before {
   float: right;
   width: 65%;
   padding-left: 20px;
+}
+
+@media (max-width: 1000px) {
+  .research_project .photocolumn,
+  .research_project .columnx2 {
+    width: 100%;
+  }
 }
 
 /* ======================================================
