@@ -32,7 +32,7 @@
 body {
   background-color: #fffcfe;
   padding: 20px;
-  margin: 0;
+  margin-inline: 15%;
   font-family: "Goudy";
 }
 
@@ -41,10 +41,13 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #7be000;
+}
+
 /* Text selection */
 ::selection {
-  background: #ff4294;
-  color: white;
+  background: #7be00046;
 }
 
 /* ======================================================
@@ -66,7 +69,7 @@ h1 {
 
 p,
 li {
-  font-size: 17px;
+  font-size: 18px;
   padding-bottom: 15px;
   font-family: "Goudy";
 }
@@ -90,7 +93,7 @@ li::before {
   content: "✳";
   font-size: larger;
   color: #004cff;
-  padding-right: 10px;
+  padding-right: 8px;
 }
 
 /* ======================================================
@@ -98,12 +101,12 @@ li::before {
 ====================================================== */
 
 .header {
-  padding: 40px;
-  padding-bottom: 0;
+  padding-top: 50px;
 }
 
 .header h1 {
   font-size: 62px;
+  margin-top: 0px;
 }
 
 .header .columnx2 {
@@ -114,15 +117,18 @@ li::before {
 
 .header .photocolumn {
   width: 35%;
-  float: right;
+  float: left;
+  padding: 15px;
 }
 
 .header .photocolumn img {
   width: 100%;
   max-width: 500px;
   max-height: 500px;
+  height: auto;
   display: block;
-  margin: 0 auto;
+  border-radius: 15px;
+  margin: 20px auto;
 }
 
 @media (max-width: 1000px) {
@@ -159,6 +165,7 @@ li::before {
   background-color: #ff4294;
   color: white;
   font-family: "Goudy";
+  text-decoration: none;
 }
 
 .navbar a.left {
@@ -177,13 +184,8 @@ li::before {
 }
 
 /* ======================================================
-   MAIN CONTENT / GRID
+   MAIN CONTENT 
 ====================================================== */
-
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
 
 .section {
   padding: 25px 0;
@@ -193,9 +195,9 @@ li::before {
   font-size: 40px;
 }
 
-.row {
-  margin: 8px -16px;
-}
+/* ======================================================
+   PERSONAL PROJECTS GRID
+====================================================== */
 
 .row::after {
   content: "";
@@ -207,6 +209,12 @@ li::before {
   float: left;
   width: 25%;
   padding: 6px;
+}
+
+.column img {
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 15px;
 }
 
 @media (max-width: 900px) {
@@ -222,31 +230,15 @@ li::before {
 }
 
 /* ======================================================
-   CARD / CONTENT BLOCKS
-====================================================== */
-
-.content {
-  padding: 15px;
-  border-radius: 15px;
-  transition: background-color 0.2s ease;
-}
-
-.content:hover {
-  background-color: #7be000;
-}
-
-.content a {
-  font-size: larger;
-}
-
-/* ======================================================
    RESEARCH PROJECTS
 ====================================================== */
 
 .research_project {
-  padding: 15px;
-  height: 285px;
-  border-radius: 20px;
+  padding-block: 15px;
+}
+
+.research_project h3{
+  color: #004cff;
 }
 
 .research_project::after {
@@ -257,24 +249,32 @@ li::before {
 
 .research_project .photocolumn {
   float: left;
-  width: 25%;
+  width: 35%;
 }
 
 .research_project .photocolumn img {
-  max-height: 240px;
+  max-width: 90%;
+  max-height: 280px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.research_project .photocolumn video {
+  max-width: 90%;
+  max-height: 280px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 15px;
+  display: block;
 }
 
 .research_project .columnx2 {
   float: right;
-  width: 75%;
+  width: 65%;
   padding-left: 25px;
 }
-
-/* .research_project .columnx2 p,
-.research_project .columnx2 li {
-  font-size: 17px;
-  padding-bottom: 15px;
-} */
 
 /* ======================================================
    SOCIAL LINKS
@@ -303,6 +303,7 @@ li::before {
   border-radius: 50%;
   text-align: center;
   margin-right: 10px;
+  text-decoration: none;
 }
 
 .social-links a i,
@@ -312,7 +313,8 @@ li::before {
 
 .social-links a:hover,
 .social-links-left a:hover {
-  opacity: 0.7;
+  color: white;
+  background-color: #004cff;
 }
 
 /* Brand colors */
