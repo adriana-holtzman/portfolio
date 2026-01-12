@@ -107,6 +107,7 @@ li::before {
 .header h1 {
   font-size: 62px;
   margin-top: 0px;
+  margin-bottom: 25px;
 }
 
 .header .columnx2 {
