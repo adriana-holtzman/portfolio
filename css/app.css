@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: "HostGroteskLight";
+  src: url("../fonts/Host_Grotesk/HostGrotesk-VariableFont_wght.ttf");
+}
+
+@font-face {
   font-family: "SpaceLight";
   src: url("../fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Light.otf")
     format("opentype");
@@ -293,46 +298,31 @@ li::before {
 .social-links,
 .social-links-left {
   display: flex;
-  align-items: center;
-  padding: 10px;
-}
-
-.social-links {
-  justify-content: center;
-}
-
-.social-links-left {
-  justify-content: flex-start;
+  padding: 0;
 }
 
 .social-links a,
 .social-links-left a {
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
+  /* width: ; */
+  /* height: 45px; */
+  /* line-height: 45px; */
   border-radius: 50%;
   text-align: center;
   margin-right: 10px;
   text-decoration: none;
-}
-
-.social-links a i,
-.social-links-left a i {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .social-links a:hover,
 .social-links-left a:hover {
-  color: white;
-  background-color: #004cff;
+  color: #7be000;
 }
 
 /* Brand colors */
 .fa-envelope,
 .fa-linkedin,
 .fa-github {
-  color: white;
-  background: #7be000;
+  color: #004cff;
 }
 
 /* ======================================================
