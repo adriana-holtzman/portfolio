@@ -15,62 +15,51 @@
 
 <!--TITLE SECTION WITH NAME, SENTENCE ABOUT INTERESTS, RESUME/LINKEDIN BUTTON LINKS-->
 <div class="header">
+  <h1>Hello! I'm Adriana Holtzman.</h1>
+  <div class="social-links">
+    <a href="mailto:adrianah@andrew.cmu.edu" target="_blank"<i class="fa fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/adriana-holtzman/" target="_blank"<i class="fa fa-linkedin"></i></a>
+    <a href="https://github.com/adriana-holtzman" target="_blank"<i class="fa fa-github"></i></a>
+    <a href="resume.pdf" target="_blank"<i>{Resume}</i></a>
+  </div>
     <div class="row">
       <div class="photocolumn">
         <img src="img/me-cp-square-2.jpeg" alt="Me">
 
-        <h3 style="margin-top: 30px; margin-bottom: 0;">adrianah [at] andrew.cmu.edu</h3>
+        <h3 style="margin-bottom: 0;">adrianah [at] andrew.cmu.edu</h3>
         <h3 style="margin-top: 0;">adriana.holtzman [at] epfl.ch</h3>
-
-        <!-- <h3 style="margin-bottom: 0;"><a href="mailto:adrianah@andrew.cmu.edu" target="_blank">&#8599; Email</a></h3> -->
-        <!-- <h3 style="margin-top: 0; margin-bottom: 0;"><a href="resume.pdf" target="_blank">&#8599; Resume</a></h3> -->
-        <!-- <h3 style="margin-top: 0; margin-bottom: 0;"><a href="https://www.linkedin.com/in/adriana-holtzman/" target="_blank">&#8599; LinkedIn</a></h3> -->
-        <!-- <h3 style="margin-top: 0;"><a href="https://github.com/adriana-holtzman" target="_blank">&#8599; Github</a></h3> -->
-
-        <div class="social-links">
-          <a href="mailto:adrianah@andrew.cmu.edu" target="_blank"<i class="fa fa-envelope"></i></a>
-          <a href="https://www.linkedin.com/in/adriana-holtzman/" target="_blank"<i class="fa fa-linkedin"></i></a>
-          <a href="https://github.com/adriana-holtzman" target="_blank"<i class="fa fa-github"></i></a>
-        </div>
-
-        <h3 ><a href="resume.pdf" target="_blank">Resume &#8599;</a></h3>
 
       </div>
       <div class="columnx2">
-        <h1>Hi! I'm Adriana.</h1>
 
         <ul>
-          <li>I study ECE and Robotics at Carnegie Mellon University.
+          <li>I study Electrical and Computer Engineering at 
+            <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a>.
             </li>
           
-          <li>I am passionate about machine learning, integrated circuit 
-            design, computer architecture, embedded systems, robotics, and 
-            biotechnology.
+          <li>I'm currently most interested in IC design, computer architecture, embedded systems, 
+            and edge AI. I'm passionate about using these interests to help people. 
           </li>
           
-          <li>I love research! I have worked in the 
-            <a href="https://www.cmu.edu/mrl/" target="_blank">CMU Micro Robotics Lab</a>, 
-            where I lead an independent project designing 
-            autonomous fish-like robots from the ground up. Recently, I have been working on 
-            building a methodology for circumlunar path planning with CMU Professor and 
+          <li>I love research! I have experience designing inertia-based actuators for the 
+            <a href="https://www.cmu.edu/mrl/" target="_blank">CMU Micro Robotics Lab</a> and 
+            advancing circumlunar path planning with CMU Professor and 
             <a href="https://www.astrobotic.com/" target=_blank">Astrobotic</a> founder 
             Red Whittaker. 
           </li>
             
           <li>This past summer, I worked at 
             <a href="https://www.draper.com/" target="_blank">Draper Laboratories</a>
-            as an Undergraduate Systems Engineer. Here, I learned what is really inside an 
-            inertial measurement unit, how to contribute to a large codebase, and 
-            what goes into verifying critical hardware.
+            as an Undergraduate Systems Engineer. Here, I learned how an 
+            inertial measurement unit works and how to effectively contribute to a large codebase.
           </li>
 
-          <li>This spring, I am studying at  
-            <a href="https://www.epfl.ch/en/" target="_blank">EPFL</a> in Switzerland! 
-            I am super excited!
+          <li>I am studying at  
+            <a href="https://www.epfl.ch/en/" target="_blank">EPFL</a> this spring, 
+            and then staying in Lausanne as an ERIP researcher in the 
+            <a href="https://www.epfl.ch/labs/esl/" target="_blank">Embedded Systems Lab</a> this summer. 
+            I am super excited to get started!
           </li>
-      
-          <li>I designed this website using HTML and CSS.</li>
-
         </ul>
       </div>
     </div>
@@ -246,20 +235,27 @@
 
 <!--FOOTER: MADE BY ADRIANA HOLTZMAN-->
 <div class="footer">
-    <p>Made by Adriana Holtzman.</p>
+    <p>Designed and built by Adriana Holtzman. Last updated February 2026.</p>
 </div>
 
 <!--TOP MENU BAR WITH LINKS TO HOME(CLICK NAME), PROJECTS, EXPERIENCE, ABOUT, CONTACT-->
 <div class="navbar">
   <a href="index.html" class="left"><b>ADRIANA HOLTZMAN</b></a>
-  <a href="resume.pdf" target="_blank">Resume</a>
-  <a href="#personal">Machining & Fabrication</a>
-  <a href="#projects">Projects</a>
-  <a href="#research">Research</a>
+  
+  <!-- Hamburger menu button (only visible on mobile) -->
+  <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
+  
+  <!-- Navigation links (will collapse on mobile) -->
+  <div class="navbar-links">
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#personal">Machining & Fabrication</a>
+    <a href="resume.pdf" target="_blank">Resume &#8599;</a>
+  </div>
 </div>
 
-</body>
+<script src="js/app.js"></script>
 
-<!--script src="js/app.js"></script>-->
+</body>
 
 </html>
