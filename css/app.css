@@ -23,21 +23,26 @@
 ====================================================== */
 
 * {
-  cursor: url("../img/aplee.png"), auto;
   box-sizing: border-box;
 }
 
-body, button, a, div, span, p, h1, h2, h3, h4, h5, h6, li {
-  cursor: url("../img/aplee.png"), auto;
+/* Apple cursor everywhere, including the page margins.
+   Cursors are 32px because Chrome hides bigger ones near the window edge.
+   "8 8" puts the click point at the center of the crosshair. */
+html,
+html * {
+  cursor: url("../img/cursor/apple.png") 8 8, auto;
 }
 
 /* Each click takes a bite of the apple (see js/app.js) */
+html.bite-1,
 html.bite-1 * {
-  cursor: url("../img/apleeslice.png"), auto;
+  cursor: url("../img/cursor/apple-slice.png") 8 8, auto;
 }
 
+html.bite-2,
 html.bite-2 * {
-  cursor: url("../img/apleecore.png"), auto;
+  cursor: url("../img/cursor/apple-core.png") 8 8, auto;
 }
 
 body {
@@ -194,11 +199,27 @@ li:hover::before {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 22px;
   z-index: 1000;
   display: flex;
+  /* Page color behind the buttons, fading out below them */
+  background: linear-gradient(to bottom, #fffcfe 0%, #fffcfe 55%, rgba(255, 252, 254, 0) 100%);
+  pointer-events: none;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Only the buttons are clickable, not the faded strip around them */
+.navbar > * {
+  pointer-events: auto;
+}
+
+/* Same 2px border as the topic filter buttons, so every pill is the same height.
+   It's transparent, so the pink (or green on hover) fills it. */
+.navbar a.left,
+.navbar-toggle,
+.navbar-links a {
+  border: 2px solid transparent;
 }
 
 .navbar a.left {
@@ -217,10 +238,10 @@ li:hover::before {
 /* Hamburger menu button - hidden by default */
 .navbar-toggle {
   background: #ff4294;
-  border: none;
   padding: 5px 20px;
   border-radius: 30px;
   font-size: 18px;
+  line-height: 21px; /* same height as the text buttons despite the bigger icon */
   color: white;
   display: none; /* Hidden by default */
 }
@@ -232,6 +253,7 @@ li:hover::before {
 /* Navigation links container */
 .navbar-links {
   display: flex;
+  gap: 8px; /* same spacing as the topic filter buttons */
 }
 
 .navbar-links a {
@@ -261,7 +283,7 @@ li:hover::before {
     flex-direction: column;
     align-items: flex-end;
     padding: 10px;
-    gap: 5px;
+    gap: 8px;
     display: none; /* Hidden by default on mobile */
   }
 
@@ -623,4 +645,45 @@ li:hover::before {
 
 .photo-swap.swapping {
   opacity: 0;
+}
+
+/* ======================================================
+   SCROLL PROGRESS (fills the navbar between the left and right buttons)
+====================================================== */
+
+.scroll-progress {
+  --progress: 0%;
+  position: relative;
+  flex: 1;
+  height: 28px;
+  margin: 0 24px;
+}
+
+.scroll-progress-track,
+.scroll-progress-fill {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  margin-top: -1px;
+  border-radius: 2px;
+}
+
+.scroll-progress-track {
+  right: 0;
+  background: rgba(0, 76, 255, 0.15);
+}
+
+.scroll-progress-fill {
+  width: var(--progress);
+  background: #004cff;
+}
+
+.scroll-progress-marker {
+  position: absolute;
+  top: 50%;
+  left: var(--progress);
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  line-height: 1;
 }

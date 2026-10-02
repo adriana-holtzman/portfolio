@@ -21,8 +21,10 @@
 <div class="navbar">
 {% if back %}
   <a href="{{ root }}index.html#{{ back }}" class="left"><b>back to {{ back }}</b></a>
+  {% include "progress.njk" %}
 {% else %}
   <a href="{{ root }}index.html" class="left"><b>{{ site.name }}</b></a>
+  {% include "progress.njk" %}
 
   <!-- Hamburger menu button (only visible on mobile) -->
   <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>

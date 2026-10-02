@@ -246,3 +246,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+// Scroll progress: move the emoji and fill the line as the page scrolls
+document.addEventListener('DOMContentLoaded', function() {
+  const bar = document.querySelector('.scroll-progress');
+  if (!bar) return;
+
+  let queued = false;
+
+  function update() {
+    queued = false;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+    bar.style.setProperty('--progress', (progress * 100) + '%');
+  }
+
+  function queueUpdate() {
+    if (!queued) {
+      queued = true;
+      requestAnimationFrame(update);
+    }
+  }
+
+  window.addEventListener('scroll', queueUpdate, { passive: true });
+  window.addEventListener('resize', queueUpdate);
+  update();
+});
