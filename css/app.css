@@ -709,3 +709,47 @@ body.speckle .navbar::before {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.22  0 0 0 0 0.22  0 0 0 0 0.25  1.3 0 0 0 -0.74'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='0' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.82  0 0 0 0 0.42  0 0 0 0 0.58  1.5 0 0 0 -0.78'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+
+/* ======================================================
+   PAPER (turn on/off with "paper" in src/_data/site.json)
+   The intro sits on a sheet of paper taped to the page
+====================================================== */
+
+.paper .header {
+  position: relative;
+  margin: 70px 0 20px;
+  padding: 40px 40px 10px;
+  background: #fffefb;
+  box-shadow:
+    0 1px 2px rgba(60, 40, 50, 0.08),
+    0 10px 30px rgba(60, 40, 50, 0.08);
+  transform: rotate(-0.4deg);
+}
+
+/* Two strips of see-through tape over the top corners */
+.paper .header::before,
+.paper .header::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  width: 120px;
+  height: 32px;
+  background: rgba(235, 230, 215, 0.6);
+  box-shadow: 0 1px 2px rgba(60, 40, 50, 0.08);
+}
+
+.paper .header::before {
+  left: 30px;
+  transform: rotate(-5deg);
+}
+
+.paper .header::after {
+  right: 30px;
+  transform: rotate(4deg);
+}
+
+@media (max-width: 900px) {
+  .paper .header {
+    padding: 30px 20px 10px;
+  }
+}

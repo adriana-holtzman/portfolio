@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body id="home"{% if site.speckle %} class="speckle"{% endif %}>
+{% set bodyClasses = [] %}
+{% if site.speckle %}{% set bodyClasses = (bodyClasses.push("speckle"), bodyClasses) %}{% endif %}
+{% if site.paper %}{% set bodyClasses = (bodyClasses.push("paper"), bodyClasses) %}{% endif %}
+<body id="home"{% if bodyClasses.length %} class="{{ bodyClasses | join(' ') }}"{% endif %}>
 
 {{ content | safe }}
 
