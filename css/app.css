@@ -31,6 +31,15 @@ body, button, a, div, span, p, h1, h2, h3, h4, h5, h6, li {
   cursor: url("../img/aplee.png"), auto;
 }
 
+/* Each click takes a bite of the apple (see js/app.js) */
+html.bite-1 * {
+  cursor: url("../img/apleeslice.png"), auto;
+}
+
+html.bite-2 * {
+  cursor: url("../img/apleecore.png"), auto;
+}
+
 body {
   background-color: #fffcfe;
   padding: 20px;
@@ -104,7 +113,21 @@ li::before {
   font-size: larger;
   font-variation-settings: 'EMOJI' 0; /* Disable emoji rendering */
   color: #004cff;
-  padding-right: 8px;
+  display: inline-block; /* lets the star rotate */
+  text-indent: 0;
+  margin-right: 8px;
+  transition: transform 0.4s ease;
+}
+
+/* The star takes a quarter turn when you hover its line */
+li:hover::before {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  li::before {
+    transition: none;
+  }
 }
 
 /* ======================================================
@@ -544,6 +567,28 @@ li::before {
   background: #7be000;
   border-color: #7be000;
   color: white;
+  outline: none;
+}
+
+.topic-chips {
+  margin-top: -12px;
+  padding-bottom: 12px;
+  color: #004cff;
+  font-size: 15px;
+}
+
+.topic-chips button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #004cff;
+  font-family: "ContentFont";
+  font-size: 15px;
+}
+
+.topic-chips button:hover,
+.topic-chips button:focus-visible {
+  color: #7be000;
   outline: none;
 }
 

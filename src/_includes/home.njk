@@ -43,6 +43,11 @@ layout: base.njk
     </div>
     <div class="columnx2">
       <h3>{{ entry.data.title }}</h3>
+      {% if entry.data.topics %}
+      <div class="topic-chips">
+        {% for topic in entry.data.topics %}<button type="button" data-topic="{{ topic }}" aria-label="Show only {{ topic }}">{{ topic }}</button>{% if not loop.last %} · {% endif %}{% endfor %}
+      </div>
+      {% endif %}
       {{ entry.content | safe }}
     </div>
   </div>

@@ -193,7 +193,26 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', function() { applyFilter(button.dataset.topic); });
   });
 
+  // The small topic chips on each card filter too
+  document.querySelectorAll('.topic-chips button').forEach(function(chip) {
+    chip.addEventListener('click', function() { applyFilter(chip.dataset.topic); });
+  });
+
   const fromUrl = new URLSearchParams(window.location.search).get('topic');
   const known = Array.from(buttons).some(function(b) { return b.dataset.topic === fromUrl; });
   if (fromUrl && known) applyFilter(fromUrl);
+});
+
+
+// Apple bites: each click swaps the cursor from whole apple, to slice, to core, and back
+document.addEventListener('DOMContentLoaded', function() {
+  const stages = ['', 'bite-1', 'bite-2'];
+  let stage = 0;
+
+  document.addEventListener('pointerdown', function(event) {
+    if (event.pointerType !== 'mouse') return;
+    if (stages[stage]) document.documentElement.classList.remove(stages[stage]);
+    stage = (stage + 1) % stages.length;
+    if (stages[stage]) document.documentElement.classList.add(stages[stage]);
+  });
 });
