@@ -1,7 +1,7 @@
 ---
 title: Extension to NORI Renderer for Waterfall Cave Scene
 order: 1
-topics: [Graphics]
+topics: [Software]
 video: waterfall-mist-compare.mp4
 alt: Waterfall cave scene before adding mist, compared with the final render
 ---
