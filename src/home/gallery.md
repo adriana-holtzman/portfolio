@@ -18,3 +18,5 @@ photos:
 ---
 
 Here are some projects I have built in my free time, mostly while working at [TechSpark (CMU's largest makerspace)](https://engineering.cmu.edu/techspark/) or taking TechSpark classes. I work in the Machine Shop at TechSpark, where I am a teaching assistant for machining courses. In addition to the machining class I help teach, Intro to Manual Machining, I have also taken Intro to Metal Jewelry, Intro to CNC Machining, and Woodshop Principles.
+
+*Click any photo to see it larger.*

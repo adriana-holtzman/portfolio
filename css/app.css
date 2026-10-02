@@ -352,14 +352,12 @@ li::before {
    SOCIAL LINKS
 ====================================================== */
 
-.social-links,
-.social-links-left {
+.social-links {
   display: flex;
   padding: 0;
 }
 
-.social-links a,
-.social-links-left a {
+.social-links a {
   line-height: 35px;
   border-radius: 50%;
   text-align: center;
@@ -368,16 +366,13 @@ li::before {
   font-size: 35px;
 }
 
-.social-links a:hover,
-.social-links-left a:hover {
+.social-links a:hover {
   color: #7be000;
 }
 
-/* Brand colors */
-.fa-envelope,
-.fa-linkedin,
-.fa-github {
-  color: #004cff;
+/* Icons take the link color, so they turn green on hover like other links */
+.social-links .fa {
+  color: inherit;
 }
 
 /* ======================================================
@@ -398,4 +393,111 @@ li::before {
 .project-media img,
 .project-media video {
   width: 100%;
+}
+
+/* ======================================================
+   SCROLL MOTION
+====================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ======================================================
+   GALLERY LIGHTBOX
+====================================================== */
+
+#personal .column img:hover,
+#personal .column img:focus-visible {
+  outline: 3px solid #ff4294;
+  outline-offset: 2px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: rgba(20, 10, 16, 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox figure {
+  margin: 0;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 82vh;
+  border-radius: 15px;
+  transform: scale(0.96);
+  transition: transform 0.25s ease;
+}
+
+.lightbox.open img {
+  transform: scale(1);
+}
+
+.lightbox figcaption {
+  color: white;
+  font-size: 18px;
+  padding-top: 12px;
+}
+
+.lightbox button {
+  background: #ff4294;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 22px;
+  line-height: 1;
+  padding: 10px 16px;
+  font-family: "ContentFont";
+}
+
+.lightbox button:hover,
+.lightbox button:focus-visible {
+  background: #7be000;
+  outline: none;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media (max-width: 600px) {
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .lightbox-prev { left: 20px; }
+  .lightbox-next { right: 20px; }
 }
