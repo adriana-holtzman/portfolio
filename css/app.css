@@ -442,7 +442,9 @@ li:hover::before {
 .research_project .photocolumn img:hover,
 .research_project .photocolumn img:focus-visible,
 .research_project .photocolumn video:hover,
-.research_project .photocolumn video:focus-visible {
+.research_project .photocolumn video:focus-visible,
+.photo-swap:hover,
+.photo-swap:focus-visible {
   outline: 3px solid #ff4294;
   outline-offset: 2px;
 }
@@ -609,4 +611,16 @@ li:hover::before {
   .research_project.filter-in {
     animation: none;
   }
+}
+
+/* ======================================================
+   PHOTO SWAP (click your headshot to see the next photo)
+====================================================== */
+
+.photo-swap {
+  transition: opacity 0.2s ease;
+}
+
+.photo-swap.swapping {
+  opacity: 0;
 }

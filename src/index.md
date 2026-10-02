@@ -2,7 +2,10 @@
 layout: home.njk
 permalink: index.html
 heading: Hello! I'm Adriana Holtzman.
-photo: me-cp-square-2.jpeg
+# Click your photo to cycle through these
+photos:
+  - me-cp-square-2.jpeg
+  - notion-me-blueline.png
 emails:
   - adrianah [at] andrew.cmu.edu
 links:

@@ -216,3 +216,33 @@ document.addEventListener('DOMContentLoaded', function() {
     if (stages[stage]) document.documentElement.classList.add(stages[stage]);
   });
 });
+
+
+// Photo swap: clicking the headshot cycles through the photos listed in src/index.md
+document.addEventListener('DOMContentLoaded', function() {
+  const photo = document.querySelector('.photo-swap');
+  if (!photo) return;
+
+  const sources = photo.dataset.photos.split(',');
+  let current = 0;
+
+  // Load the other photos ahead of time so the swap is instant
+  sources.slice(1).forEach(function(src) { new Image().src = src; });
+
+  function next() {
+    current = (current + 1) % sources.length;
+    photo.classList.add('swapping');
+    setTimeout(function() {
+      photo.src = sources[current];
+      photo.classList.remove('swapping');
+    }, 200);
+  }
+
+  photo.addEventListener('click', next);
+  photo.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      next();
+    }
+  });
+});

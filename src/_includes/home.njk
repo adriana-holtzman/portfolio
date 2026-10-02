@@ -11,7 +11,11 @@ layout: base.njk
   </div>
   <div class="row">
     <div class="photocolumn">
-      <img src="img/{{ photo }}" alt="Me">
+      {% if photos.length > 1 %}
+      <img src="img/{{ photos[0] }}" alt="Me" class="photo-swap" data-photos="{% for p in photos %}img/{{ p }}{% if not loop.last %},{% endif %}{% endfor %}" tabindex="0" role="button" aria-label="Photo of me, click to see another">
+      {% else %}
+      <img src="img/{{ photos[0] }}" alt="Me">
+      {% endif %}
       {% for email in emails %}
       <h3 style="margin-{{ 'bottom' if loop.first else 'top' }}: 0;">{{ email }}</h3>
       {% endfor %}
