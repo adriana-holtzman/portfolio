@@ -1,0 +1,8 @@
+{% if item.video %}
+<video width="100%" autoplay muted loop>
+  <source src="{{ root }}img/{{ item.video }}" type="video/mp4">
+  {{ item.alt }}
+</video>
+{% elif item.image %}
+<img src="{{ root }}img/{{ item.image }}" alt="{{ item.alt }}">
+{% endif %}

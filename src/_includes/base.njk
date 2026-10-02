@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ title or site.title }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ root }}css/app.css" rel="stylesheet">
+  <link href="{{ root }}img/notion-me-pink.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="home">
+
+{{ content | safe }}
+
+<div class="footer">
+  <p>Designed and built by Adriana Holtzman. Last updated {{ site.lastUpdated }}.</p>
+</div>
+
+<div class="navbar">
+{% if back %}
+  <a href="{{ root }}index.html#{{ back }}" class="left"><b>back to {{ back }}</b></a>
+{% else %}
+  <a href="{{ root }}index.html" class="left"><b>{{ site.name }}</b></a>
+
+  <!-- Hamburger menu button (only visible on mobile) -->
+  <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
+
+  <div class="navbar-links">
+    {% for item in site.nav %}
+    <a href="{{ item.href }}"{% if item.newTab %} target="_blank"{% endif %}>{{ item.label | safe }}</a>
+    {% endfor %}
+  </div>
+{% endif %}
+</div>
+
+<script src="{{ root }}js/app.js"></script>
+
+</body>
+
+</html>

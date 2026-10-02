@@ -1,0 +1,5 @@
+{
+  "layout": "project.njk",
+  "root": "../",
+  "permalink": "projects/{{ page.fileSlug }}.html"
+}

@@ -1,0 +1,59 @@
+---
+layout: base.njk
+---
+<div class="header">
+  <h1>{{ heading }}</h1>
+  <div class="social-links">
+    <a href="mailto:{{ links.email }}" target="_blank"><i class="fa fa-envelope"></i></a>
+    <a href="{{ links.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a href="{{ links.github }}" target="_blank"><i class="fa fa-github"></i></a>
+    <a href="resume.pdf" target="_blank">{Resume}</a>
+  </div>
+  <div class="row">
+    <div class="photocolumn">
+      <img src="img/{{ photo }}" alt="Me">
+      {% for email in emails %}
+      <h3 style="margin-{{ 'bottom' if loop.first else 'top' }}: 0;">{{ email }}</h3>
+      {% endfor %}
+    </div>
+    <div class="columnx2">
+      {{ content | safe }}
+    </div>
+  </div>
+</div>
+
+{% for section in [
+  { id: "research", title: "Research", items: collections.research },
+  { id: "projects", title: "Projects", items: collections.projects }
+] %}
+<div class="section" id="{{ section.id }}">
+  <h1>{{ section.title }}</h1>
+  {% for entry in section.items | sort(false, false, "data.order") %}
+  <div class="research_project">
+    <div class="photocolumn">
+      {% set item = entry.data %}
+      {% include "media.njk" %}
+    </div>
+    <div class="columnx2">
+      <h3>{{ entry.data.title }}</h3>
+      {{ entry.content | safe }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+
+{% set gallery = collections.gallery | first %}
+<div class="section" id="personal">
+  <h1>{{ gallery.data.title }}</h1>
+  {{ gallery.content | safe }}
+  <div class="row">
+    {% for column in gallery.data.photos | columns(4) %}
+    <div class="column">
+      {% for item in column %}
+      {% include "media.njk" %}
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

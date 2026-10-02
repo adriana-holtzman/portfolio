@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<div class="section">
+  <h1 style="text-align: center;">{{ heading }}</h1>
+  <div>
+    {{ content | safe }}
+  </div>
+  <div class="project-media">
+    {% for item in media %}
+    {% include "media.njk" %}
+    {% if item.caption %}<p>{{ item.caption }}</p>{% endif %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "title": "Adriana Holtzman - ECE @ CMU",
+  "name": "ADRIANA HOLTZMAN",
+  "lastUpdated": "June 2026",
+  "nav": [
+    { "label": "Research", "href": "#research" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Machining & Fabrication", "href": "#personal" },
+    { "label": "Resume &#8599;", "href": "resume.pdf", "newTab": true }
+  ]
+}
