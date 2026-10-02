@@ -711,14 +711,76 @@ body.speckle .navbar::before {
 }
 
 /* ======================================================
-   PAPER (turn on/off with "paper" in src/_data/site.json)
-   The intro sits on a sheet of paper taped to the page
+   INTRO STYLE (choose with "intro" in src/_data/site.json)
+   "bubble": the intro sits in a soft rounded rectangle
+   "paper":  the intro sits on a sheet of paper taped to the page
 ====================================================== */
 
-.paper .header {
+/* Both styles share the same size and spacing */
+.intro-bubble .header,
+.intro-paper .header {
   position: relative;
   margin: 70px 0 20px;
   padding: 40px 40px 10px;
+}
+
+@media (max-width: 900px) {
+  .intro-bubble .header,
+  .intro-paper .header {
+    padding: 30px 20px 10px;
+  }
+}
+
+/* Bubble: a clear acrylic business card. Mostly transparent, crisp edge, faint shine */
+.intro-bubble .header {
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.38) 0%,
+    rgba(255, 255, 255, 0.12) 45%,
+    rgba(255, 255, 255, 0.2) 100%);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 14px;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.95),      /* bright top edge */
+    inset 0 -1px 1px rgba(40, 40, 50, 0.06),        /* faint bottom edge */
+    0 1px 3px rgba(40, 40, 50, 0.06),               /* close shadow */
+    0 12px 32px rgba(40, 40, 50, 0.08);             /* soft lift shadow */
+}
+
+/* Faint diagonal shine */
+.intro-bubble .header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(115deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.15) 22%,
+    rgba(255, 255, 255, 0) 40%);
+  pointer-events: none;
+  z-index: -1; /* behind the text, in front of the card */
+}
+
+/* Crisp edge, like the cut side of acrylic */
+.intro-bubble .header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(160deg,
+    rgba(255, 255, 255, 1),
+    rgba(200, 205, 215, 0.7) 50%,
+    rgba(255, 255, 255, 0.9));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Paper */
+.intro-paper .header {
   background: #fffefb;
   box-shadow:
     0 1px 2px rgba(60, 40, 50, 0.08),
@@ -726,9 +788,9 @@ body.speckle .navbar::before {
   transform: rotate(-0.4deg);
 }
 
-/* Two strips of see-through tape over the top corners */
-.paper .header::before,
-.paper .header::after {
+/* Two strips of see-through tape over the paper's top corners */
+.intro-paper .header::before,
+.intro-paper .header::after {
   content: "";
   position: absolute;
   top: -14px;
@@ -738,18 +800,12 @@ body.speckle .navbar::before {
   box-shadow: 0 1px 2px rgba(60, 40, 50, 0.08);
 }
 
-.paper .header::before {
+.intro-paper .header::before {
   left: 30px;
   transform: rotate(-5deg);
 }
 
-.paper .header::after {
+.intro-paper .header::after {
   right: 30px;
   transform: rotate(4deg);
-}
-
-@media (max-width: 900px) {
-  .paper .header {
-    padding: 30px 20px 10px;
-  }
 }

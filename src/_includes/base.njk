@@ -12,7 +12,7 @@
 
 {% set bodyClasses = [] %}
 {% if site.speckle %}{% set bodyClasses = (bodyClasses.push("speckle"), bodyClasses) %}{% endif %}
-{% if site.paper %}{% set bodyClasses = (bodyClasses.push("paper"), bodyClasses) %}{% endif %}
+{% if site.intro %}{% set bodyClasses = (bodyClasses.push("intro-" + site.intro), bodyClasses) %}{% endif %}
 <body id="home"{% if bodyClasses.length %} class="{{ bodyClasses | join(' ') }}"{% endif %}>
 
 {{ content | safe }}

@@ -4,7 +4,7 @@
   "lastUpdated": "October 2026",
   "progressEmoji": "🍏",
   "speckle": true,
-  "paper": true,
+  "intro": "bubble",
   "nav": [
     { "label": "Research", "href": "#research" },
     { "label": "Projects", "href": "#projects" },
