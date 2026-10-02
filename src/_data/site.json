@@ -1,8 +1,9 @@
 {
   "title": "Adriana Holtzman - ECE @ CMU",
   "name": "ADRIANA HOLTZMAN",
-  "lastUpdated": "June 2026",
+  "lastUpdated": "October 2026",
   "progressEmoji": "🍏",
+  "speckle": true,
   "nav": [
     { "label": "Research", "href": "#research" },
     { "label": "Projects", "href": "#projects" },
