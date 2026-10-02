@@ -22,6 +22,13 @@ layout: base.njk
   </div>
 </div>
 
+<div class="topic-filter" role="group" aria-label="Filter research and projects by topic">
+  <button type="button" class="active" data-topic="all" aria-pressed="true">All</button>
+  {% for topic in collections.research | topicList(collections.projects) %}
+  <button type="button" data-topic="{{ topic }}" aria-pressed="false">{{ topic }}</button>
+  {% endfor %}
+</div>
+
 {% for section in [
   { id: "research", title: "Research", items: collections.research },
   { id: "projects", title: "Projects", items: collections.projects }
@@ -29,7 +36,7 @@ layout: base.njk
 <div class="section" id="{{ section.id }}">
   <h1>{{ section.title }}</h1>
   {% for entry in section.items | sort(false, false, "data.order") %}
-  <div class="research_project">
+  <div class="research_project" data-topics="{{ entry.data.topics | join(',') }}">
     <div class="photocolumn">
       {% set item = entry.data %}
       {% include "media.njk" %}
@@ -40,6 +47,7 @@ layout: base.njk
     </div>
   </div>
   {% endfor %}
+  <p class="topic-empty" hidden>No {{ section.title | lower }} for this topic yet.</p>
 </div>
 {% endfor %}
 

@@ -31,6 +31,15 @@ export default function (eleventyConfig) {
     return Array.from({ length: n }, (_, i) => items.slice(i * size, (i + 1) * size));
   });
 
+  // Every topic used across the given lists of entries, most common first
+  eleventyConfig.addFilter("topicList", (...lists) => {
+    const counts = new Map();
+    lists.flat().forEach((entry) =>
+      (entry.data.topics || []).forEach((topic) => counts.set(topic, (counts.get(topic) || 0) + 1))
+    );
+    return [...counts.keys()].sort((a, b) => counts.get(b) - counts.get(a));
+  });
+
   return {
     dir: {
       input: "src",

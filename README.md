@@ -18,6 +18,8 @@ All the writing lives in Markdown under `src/`. [Eleventy](https://www.11ty.dev/
 
 **Add a research or project entry:** copy one of the files in `src/home/research/` or `src/home/projects/`, then change the title, `order` (its position in the list), and `image` (or `video`), which is a file in `img/`.
 
+**Topics:** each entry has a `topics:` list, like `topics: [Embedded, Hardware]`. The filter buttons above Research are made from these automatically, with the most common topic first. To share a filtered view, add the topic to the link, for example `index.html?topic=Embedded`.
+
 **Add a full project page:** copy `src/projects/synth.md`. It becomes `projects/<filename>.html`.
 
 ## Running locally

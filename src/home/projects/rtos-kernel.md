@@ -1,6 +1,7 @@
 ---
 title: Embedded RTOS Kernel on Custom PCB for Miniature Car
 order: 2
+topics: [Embedded, Hardware]
 image: embedded-pcb.png
 alt: PCB design in Fusion
 ---

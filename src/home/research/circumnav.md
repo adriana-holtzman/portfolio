@@ -1,6 +1,7 @@
 ---
 title: Circumlunar Path Planning for CircumNav Rover
-order: 1
+order: 3
+topics: [Robotics]
 image: circumnav_shorten.png
 alt: CircumNav Route Length Reduction
 ---

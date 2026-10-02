@@ -1,6 +1,7 @@
 ---
 title: Caudal Fin Actuator for Autonomous Fish-like Robots
-order: 2
+order: 4
+topics: [Robotics, Hardware]
 video: segmentation-demo.mp4
 alt: Underwater Actuator Demo
 ---

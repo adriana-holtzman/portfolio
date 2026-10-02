@@ -1,5 +1,5 @@
 {% if item.video %}
-<video width="100%" autoplay muted loop>
+<video width="100%" autoplay muted loop playsinline aria-label="{{ item.alt }}">
   <source src="{{ root }}img/{{ item.video }}" type="video/mp4">
   {{ item.alt }}
 </video>

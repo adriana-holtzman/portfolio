@@ -1,6 +1,7 @@
 ---
 title: "SuperSynth: Analog Audio Synthesizer"
 order: 4
+topics: [Hardware, Audio]
 image: synth.png
 alt: Synth
 ---
